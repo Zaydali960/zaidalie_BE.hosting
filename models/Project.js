@@ -18,12 +18,10 @@ const projectSchema = new mongoose.Schema(
     },
     githubLink: {
       type: String,
-      required: true,
       trim: true,
     },
     projectLink: {
       type: String, // live site or deployed link
-      required: true,
       trim: true,
     },
   },
