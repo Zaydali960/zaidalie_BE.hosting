@@ -25,6 +25,7 @@ router.post('/createuser', async(req, res) => {
 })
 
 router.post('/login', async(req, res) => {
+    
     const username = req.body.username
     const user = await Admin.findOne({ username: username })
     if (!user) {
@@ -38,7 +39,7 @@ router.post('/login', async(req, res) => {
         user: user._id
     }
     const authToken = jwt.sign(data, JWT_SECRET)
-    res.json({ authToken })
+    res.json({ authToken,  success: true, })
 
 })
 

@@ -12,7 +12,7 @@ app.use(express.json())
 app.use(cors({ origin: true }))
 
 // app.use('/api/sendmessage', require('./routes/twilio'))
-// app.use('/api/sendemail', require('./routes/email'))
+app.use('/api/project', require('./routes/project'))
 app.use('/api/auth', require('./routes/auth'))
 
 
